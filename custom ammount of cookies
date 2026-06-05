@@ -1,0 +1,8 @@
+let amount = prompt("How many cookies do you want?");
+
+if (amount !== null) {
+    Game.cookies = parseFloat(amount);
+    Game.cookiesEarned = parseFloat(amount);
+    Game.RefreshStore();
+    alert("You have now " + amount + " cookies!");
+}
