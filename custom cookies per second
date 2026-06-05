@@ -1,0 +1,17 @@
+let cps = prompt("How many cookies per second do you want?");
+
+cps = parseFloat(cps);
+
+if (!isNaN(cps)) {
+
+    // Set custom CPS
+    Game.cookiesPs = cps;
+    Game.computedMouseCps = cps;
+
+    // Geeft genoeg cookies zodat CPS zichtbaar blijft
+    Game.cookies += cps;
+
+    alert("Your cookies per second are now " + cps);
+} else {
+    alert("That is not a valid number please enter a valid number.");
+}
