@@ -1,0 +1,15 @@
+let lumps = prompt("How many sugar lumps do you want?");
+
+lumps = parseInt(lumps);
+
+if (!isNaN(lumps)) {
+    Game.lumps = lumps;
+    Game.lumpsTotal = lumps;
+    Game.lumpsEarned = lumps;
+
+    Game.computeLumpTimes();
+    
+    alert("You have now " + lumps + " sugar lumps!");
+} else {
+    alert("That is not a number please enter a valid number.");
+}
