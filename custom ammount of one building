@@ -1,0 +1,14 @@
+let buildingName = prompt("Which building o you want? ");
+let amount = prompt("How much do you want of that building?");
+
+amount = parseInt(amount);
+
+if (Game.Objects[buildingName] && !isNaN(amount)) {
+    Game.Objects[buildingName].amount += amount;
+    Game.Objects[buildingName].bought += amount;
+    Game.Objects[buildingName].refresh();
+
+    alert("Je hebt nu " + Game.Objects[buildingName].amount + " " + buildingName + "(s)!");
+} else {
+    alert("There is no building with that name.");
+}
